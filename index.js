@@ -7,4 +7,5 @@ const Nav =  StackNavigator({
     screen: App,
   },
 },{headerMode : 'none'});
+
 AppRegistry.registerComponent('ListMovie', () => Nav);

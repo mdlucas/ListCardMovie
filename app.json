@@ -1,4 +1,9 @@
 {
   "name": "ListMovie",
-  "displayName": "ListMovie"
+  "displayName": "ListMovie",
+  "expo": {
+    "name": "ListMovie",
+    "slug": "list-movie",
+    "sdkVersion": "20.0.0"
+  }
 }

@@ -88,7 +88,7 @@ export default class App extends Component {
         <Button small style={{ marginTop: 10 }} onPress={() => this.getDetails(item.id)}>
           <Text>Detalhes </Text>
         </Button>
-        <Text note style={styles.countVotes}>{item.vote_count} Votos</Text>
+        <Text note>{item.vote_count} Votos</Text>
       </Body>
       <View style={styles.backNote}>
         <Text style={styles.note}>{item.vote_average}</Text>
@@ -132,7 +132,7 @@ export default class App extends Component {
                 <Body />
                 <Right />
               </Header>
-              <View>
+              <Content>
                 <Image style={styles.imgDetails} source={{ uri: 'https://image.tmdb.org/t/p/w780' + this.state.movieSelect.backdrop_path }} />
                 <View style={styles.backNoteDetails}>
                   <Text style={styles.noteDetails} >{this.state.movieSelect.vote_average}</Text>
@@ -157,7 +157,7 @@ export default class App extends Component {
 
                 </View>
 
-              </View>
+              </Content>
 
 
             </Container>
