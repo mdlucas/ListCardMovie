@@ -125,7 +125,7 @@ export default class App extends Component {
             <Container>
               <Header>
                 <Left>
-                  <Button iconLeft onPress={() => this.setState({ modalDetails: false })}>
+                  <Button transparent onPress={() => this.setState({ modalDetails: false })}>
                     <Icon name='arrow-back' />
                   </Button>
                 </Left>
@@ -202,22 +202,27 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   tags: {
-    flexDirection: 'row',
-    marginLeft: 10
+    flex: 1, 
+    flexDirection: 'row', 
+    flexWrap: 'wrap', 
+    width: '90%'
   },
   tag: {
     backgroundColor: '#2196F3',
     padding: 5,
+    height: 35,
+    marginTop: 5,
+    width: 'auto',
     borderRadius: 12,
     color: 'white',
-    marginRight: 5
+    marginLeft: 5
   },
   details: {
     padding: 10,
     flexDirection: 'row',
     marginTop: 10
   },
-  imgDetails: { height: 300 },
+  imgDetails: { height: 240 },
   noteDetails: {
     fontSize: 24,
     color: 'white'
@@ -235,7 +240,7 @@ const styles = StyleSheet.create({
   },
   backNoteDetails: {
     position: 'absolute',
-    top: 260,
+    top: 180,
     right: 20,
     backgroundColor: '#0288D1',
     justifyContent: 'center',
