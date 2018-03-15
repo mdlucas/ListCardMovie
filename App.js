@@ -140,7 +140,8 @@ export default class App extends Component {
                 <View style={styles.details}>
                   <Image style={styles.thumbnail} source={{ uri: 'https://image.tmdb.org/t/p/w500' + this.state.movieSelect.poster_path }} />
                   <View >
-                    <Text style={styles.title} >{this.state.movieSelect.original_title} - {this.state.movieSelect.runtime} min</Text>
+                    <Text style={styles.title} >{this.state.movieSelect.original_title}</Text>
+                    <Text style={styles.title} >{this.state.movieSelect.runtime} min</Text>
                     <View style={styles.tags}>
                       {this.state.movieSelect.genres && this.state.movieSelect.genres.map((item) => {
                         return <Text style={styles.tag}>{item.name}</Text>;
@@ -274,7 +275,8 @@ const styles = StyleSheet.create({
     right: 20
   },
   title: {
-    fontSize: 24,
+    flex: 1,
+    fontSize: 20,
     padding: 10,
     fontWeight: 'bold'
   }
