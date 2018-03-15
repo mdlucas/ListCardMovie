@@ -84,7 +84,7 @@ export default class App extends Component {
         <View style={styles.backDate}>
           <Text style={styles.note}>{moment(item.release_date).format('DD/MM/YYYY')}</Text>
         </View>
-        <Text note>{item.overview.length > 300 ? `${item.overview.substr(0, 300)}...` : item.overview}</Text>
+        <Text note>{item.overview.length > 200 ? `${item.overview.substr(0, 200)}...` : item.overview}</Text>
         <Button small style={{ marginTop: 10 }} onPress={() => this.getDetails(item.id)}>
           <Text>Detalhes </Text>
         </Button>
