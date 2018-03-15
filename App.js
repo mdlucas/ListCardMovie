@@ -139,7 +139,7 @@ export default class App extends Component {
                 </View>
                 <View style={styles.details}>
                   <Image style={styles.thumbnail} source={{ uri: 'https://image.tmdb.org/t/p/w500' + this.state.movieSelect.poster_path }} />
-                  <View >
+                  <View style={{  flex: 1,  flexWrap: 'wrap', }}>
                     <Text style={styles.title} >{this.state.movieSelect.original_title}</Text>
                     <Text style={styles.title} >{this.state.movieSelect.runtime} min</Text>
                     <View style={styles.tags}>
