@@ -14,7 +14,7 @@ import {
   Modal,
   ActivityIndicator
 } from 'react-native';
-import { Container, Header, Title,Label, Card, CardItem, Content, Button, List, ListItem, Thumbnail, Left, Right, Body, Icon, Text } from 'native-base';
+import { Container, Header, Title, Label, Card, CardItem, Content, Button, List, ListItem, Thumbnail, Left, Right, Body, Icon, Text } from 'native-base';
 import axios from 'axios';
 import moment from 'moment'
 
@@ -133,14 +133,14 @@ export default class App extends Component {
                 <Right />
               </Header>
               <View>
-                <Image style={{ height: 300 }} source={{ uri: 'https://image.tmdb.org/t/p/w780' + this.state.movieSelect.backdrop_path }} />
+                <Image style={styles.imgDetails} source={{ uri: 'https://image.tmdb.org/t/p/w780' + this.state.movieSelect.backdrop_path }} />
                 <View style={styles.backNoteDetails}>
-                  <Text style={{ fontSize: 24, color: 'white' }} >{this.state.movieSelect.vote_average}</Text>
+                  <Text style={styles.noteDetails} >{this.state.movieSelect.vote_average}</Text>
                 </View>
-                <View style={{ padding: 10, flexDirection: 'row', marginTop: 10 }}>
+                <View style={styles.details}>
                   <Image style={styles.thumbnail} source={{ uri: 'https://image.tmdb.org/t/p/w500' + this.state.movieSelect.poster_path }} />
                   <View >
-                    <Text style={{ fontSize: 24, padding: 10, fontWeight: 'bold' }} >{this.state.movieSelect.original_title} - {this.state.movieSelect.runtime} min</Text>
+                    <Text style={styles.title} >{this.state.movieSelect.original_title} - {this.state.movieSelect.runtime} min</Text>
                     <View style={styles.tags}>
                       {this.state.movieSelect.genres && this.state.movieSelect.genres.map((item) => {
                         return <Text style={styles.tag}>{item.name}</Text>;
@@ -212,6 +212,16 @@ const styles = StyleSheet.create({
     color: 'white',
     marginRight: 5
   },
+  details: {
+    padding: 10,
+    flexDirection: 'row',
+    marginTop: 10
+  },
+  imgDetails: { height: 300 },
+  noteDetails: {
+    fontSize: 24,
+    color: 'white'
+  },
   backNote: {
     position: 'absolute',
     bottom: 20,
@@ -257,6 +267,11 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 10,
     right: 20
+  },
+  title: {
+    fontSize: 24,
+    padding: 10,
+    fontWeight: 'bold'
   }
 
 });
